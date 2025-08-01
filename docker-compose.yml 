@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  face-api:
+    container_name: astrodom-face-api
+    build:
+      context: ./face-api
+    ports:
+      - '5252:5252'
+    networks:
+      - astrodom-net
+
+networks:
+  astrodom-net:
+    driver: bridge
